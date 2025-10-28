@@ -181,8 +181,9 @@ function App() {
   const shouldShowScanner = status !== 'decoded'
 
   return (
-    <div className="mx-auto flex min-h-screen w-full max-w-[1400px] flex-col gap-10 px-6 py-12 lg:flex-row lg:items-start lg:gap-12 xl:px-12">
-      <div className="flex w-full flex-col gap-6 text-[#f3fcff] lg:sticky lg:top-12 lg:max-w-sm">
+    <div className="mx-auto flex min-h-screen w-full max-w-[1400px] flex-col gap-10 px-6 py-12 xl:px-12">
+      <div className="flex w-full flex-col gap-10 lg:flex-row lg:items-start lg:gap-12">
+        <div className="flex w-full flex-col gap-6 text-[#f3fcff] lg:sticky lg:top-12 lg:max-w-sm">
         <header className="flex flex-col gap-4">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[#97d7ea]/80">
@@ -237,12 +238,44 @@ function App() {
         {statusHint && (
           <p className={`text-sm font-medium ${statusColor}`}>{statusHint}</p>
         )}
+
       </div>
 
-      <main className="flex w-full flex-col gap-8 lg:flex-1">
-        <CameraPreview status={status} videoRef={videoRef} visible={shouldShowScanner} />
-        <DecodedAccounts accounts={accounts} />
-      </main>
+        <main className="flex w-full flex-col gap-8 lg:flex-1">
+          <CameraPreview status={status} videoRef={videoRef} visible={shouldShowScanner} />
+          <DecodedAccounts accounts={accounts} />
+        </main>
+      </div>
+
+      <section className="grid gap-4 rounded-2xl bg-white/85 p-5 text-left text-[#0b2a36] shadow-[0_18px_40px_rgba(10,56,70,0.18)]">
+        <h2 className="text-sm font-semibold uppercase tracking-[0.35em] text-[#0a5f79]">
+          Why Trust This Tool?
+        </h2>
+        <div className="grid gap-3 text-sm">
+          <p className="rounded-xl bg-[#f0fbff] px-4 py-3 font-medium leading-snug text-[#053546]">
+            <span className="mr-2 inline-flex items-center rounded-full bg-[#0ea5b9]/18 px-2 py-0.5 text-xs font-semibold uppercase tracking-[0.25em] text-[#05647c]">
+              Privacy Focused
+            </span>
+            All decoding happens locally in your browser. No data ever leaves this window.
+          </p>
+          <p className="rounded-xl bg-[#f0fbff] px-4 py-3 font-medium leading-snug text-[#053546]">
+            <span className="mr-2 inline-flex items-center rounded-full bg-[#0ea5b9]/18 px-2 py-0.5 text-xs font-semibold uppercase tracking-[0.25em] text-[#05647c]">
+              Completely Offline
+            </span>
+            Works even without internet once loaded. Perfect for sensitive migrations.
+          </p>
+          <p className="rounded-xl bg-[#f0fbff] px-4 py-3 font-medium leading-snug text-[#053546]">
+            <span className="mr-2 inline-flex items-center rounded-full bg-[#0ea5b9]/18 px-2 py-0.5 text-xs font-semibold uppercase tracking-[0.25em] text-[#05647c]">
+              Transparent Process
+            </span>
+            Built with open libraries and protobuf decoding aligned with Google’s export format.
+          </p>
+        </div>
+        <p className="rounded-xl border border-[#0ea5b9]/20 bg-white px-4 py-3 text-xs font-medium leading-relaxed text-[#0b2a36]/80">
+          This project is an independent community effort and is not affiliated with Google or the
+          Google Authenticator team.
+        </p>
+      </section>
     </div>
   )
 }
