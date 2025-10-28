@@ -52,7 +52,7 @@ export function DecodedAccounts({ accounts }: DecodedAccountsProps) {
                       <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0f5066]">
                         Secret (Base32)
                       </dt>
-                      <dd className="font-mono text-sm text-[#0d2a36]">{account.totpSecret}</dd>
+                      <dd className="font-mono text-sm text-[#0d2a36] break-all leading-relaxed bg-white/90 rounded px-3 py-1 shadow-inner">{account.totpSecret}</dd>
                     </>
                   )}
                   {account.algorithm && (
