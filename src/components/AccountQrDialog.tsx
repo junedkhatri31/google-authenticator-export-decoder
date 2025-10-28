@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { MouseEvent } from 'react'
 import QRCode from 'qrcode-generator'
+import { InfoTooltip } from './InfoTooltip'
 import type { DecodedAccount } from '../lib/googleAuthDecoder'
 
 type AccountQrDialogProps = {
@@ -151,6 +152,19 @@ export function AccountQrDialog({ account, onClose }: AccountQrDialogProps) {
           )}
         </header>
 
+        <div className="mb-4 flex items-center gap-2 text-sm text-[#043855]">
+          <InfoTooltip
+            label="How to use this QR code"
+            content={(
+              <div className="space-y-2">
+                <p className="font-semibold text-[#043855]">Scan guidance</p>
+                <p className="text-[#06415a]">Scan the QR with your next authenticator app (Google Authenticator, Aegis, 1Password, etc.) to import the selected account immediately.</p>
+              </div>
+            )}
+          />
+          <span className="rounded-full bg-[#dff6ff] px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#0a6078]">Scan guidance</span>
+        </div>
+
         <div className="flex flex-col items-center gap-4">
           {qrDataUrl ? (
             <img
@@ -168,6 +182,18 @@ export function AccountQrDialog({ account, onClose }: AccountQrDialogProps) {
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0d546d]/70">
               otpauth URI
             </p>
+            <div className="mt-2 flex items-center gap-2 text-xs text-[#043245]">
+              <InfoTooltip
+                label="How to use this otpauth URI"
+                content={(
+                  <div className="space-y-1">
+                    <p className="text-[#05324a]">Copy the URI to paste into password managers or authenticator tools.</p>
+                    <p className="text-[#05324a]">KeePass: <strong>Add Entry → Advanced → More → OTP Generator Settings</strong>.</p>
+                  </div>
+                )}
+              />
+              <span className="rounded-full bg-[#dff6ff] px-2 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.3em] text-[#0a6078]">otpauth tips</span>
+            </div>
             <p className="mt-2 break-words font-mono text-sm text-[#033043]">{otpAuthUri}</p>
             <button
               type="button"
