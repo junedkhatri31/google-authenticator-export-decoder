@@ -4,6 +4,8 @@ Interactive web application for recovering account details from Google Authentic
 
 👉 **Live demo:** https://authenticator-export-decoder.juned.site
 
+If you find this tool helpful, please consider ⭐ starring the repository to support future improvements.
+
 > **Notice**  
 > This project is an independent community effort and is **not affiliated with Google or the Google Authenticator team**. All decoding occurs locally in your browser; nothing is uploaded to any server.
 
@@ -65,4 +67,9 @@ The `build` command emits a static bundle in `dist/` that can be hosted on any s
 
 ## License & Contributions
 
-This project is provided without warranty. Contributions, bug reports, and feature requests are welcome — please open an issue or submit a pull request.
+Distributed under the terms of the [MIT License](LICENSE). Contributions of any size are welcome — open an issue for bugs or ideas, or send a pull request to help improve the project.
+## References
+
+- [google-authenticator-exporter](https://github.com/krissrex/google-authenticator-exporter) — original CLI inspiration and protobuf decoding reference.
+
+
