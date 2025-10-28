@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# Google Authenticator Export Decoder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interactive web application for recovering account details from Google Authenticator migration QR codes. Scan the export directly with your camera to reveal TOTP/HOTP secrets, copy the generated otpauth URI, or display an authenticator-ready QR code.
 
-Currently, two official plugins are available:
+> **Notice**  
+> This project is an independent community effort and is **not affiliated with Google or the Google Authenticator team**. All decoding occurs locally in your browser; nothing is uploaded to any server.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Live camera scanning** powered by [`qr-scanner`](https://github.com/nimiq/qr-scanner) with camera switching support.
+- **Automated protobuf decoding** of Google Authenticator migration payloads (SHA1/256/512, TOTP & HOTP).
+- **Instant otpauth export** — copy the URI or render a scannable QR code per account.
+- **Privacy-first UX** with clear trust indicators and an offline-friendly build.
+- Modern React 19 + TypeScript + Vite setup with Tailwind-based styling.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js 20+
+- PNPM 9+ (or adapt the commands to npm/yarn)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development Server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm dev
 ```
+
+Visit http://localhost:5173/ and grant camera access when prompted.
+
+### Production Build
+
+```bash
+pnpm build
+pnpm preview
+```
+
+The `build` command emits a static bundle in `dist/` that can be hosted on any static site provider.
+
+## Usage
+
+1. Open the app and choose the preferred camera (rear cameras are recommended on mobile).
+2. Click **Start Scanning** and present the Google Authenticator export QR code.
+3. Once decoded, review the account list:
+   - `Secret (Base32)` is ready for other TOTP/HOTP apps.
+   - Use **Show QR Code** to display an otpauth QR code along with a copyable otpauth URI.
+4. Select **Scan Another Code** to process additional migration exports.
+
+## Tech Stack
+
+- [React 19](https://react.dev/)
+- [Vite 7](https://vite.dev/)
+- [Tailwind via `@tailwindcss/vite`](https://tailwindcss.com/)
+- [qr-scanner](https://github.com/nimiq/qr-scanner) for camera scanning
+- [protobufjs](https://github.com/protobufjs/protobuf.js) for decoding migration payloads
+- [qrcode-generator](https://github.com/kazuhikoarase/qrcode-generator) for otpauth exports
+
+## License & Contributions
+
+This project is provided without warranty. Contributions, bug reports, and feature requests are welcome — please open an issue or submit a pull request.
