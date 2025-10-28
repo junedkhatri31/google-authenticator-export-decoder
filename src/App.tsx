@@ -239,6 +239,20 @@ function App() {
           <p className={`text-sm font-medium ${statusColor}`}>{statusHint}</p>
         )}
 
+        <a
+          className="inline-flex items-center gap-2 self-start rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(7,70,92,0.25)] transition hover:-translate-y-0.5 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0c95a1]"
+          href="https://github.com/junedkhatri31/google-authenticator-export-decoder"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="/github-mark-white.svg"
+            alt=""
+            className="h-4 w-4"
+          />
+          View on GitHub
+        </a>
+
       </div>
 
         <main className="flex w-full flex-col gap-8 lg:flex-1">
@@ -269,6 +283,12 @@ function App() {
               Transparent Process
             </span>
             Built with open libraries and protobuf decoding aligned with Google’s export format.
+          </p>
+          <p className="rounded-xl bg-[#f0fbff] px-4 py-3 font-medium leading-snug text-[#053546]">
+            <span className="mr-2 inline-flex items-center rounded-full bg-[#0ea5b9]/18 px-2 py-0.5 text-xs font-semibold uppercase tracking-[0.25em] text-[#05647c]">
+              Open Source
+            </span>
+            Review or contribute on GitHub — every line of code is available for inspection and reuse.
           </p>
         </div>
         <p className="rounded-xl border border-[#0ea5b9]/20 bg-white px-4 py-3 text-xs font-medium leading-relaxed text-[#0b2a36]/80">
