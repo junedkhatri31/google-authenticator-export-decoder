@@ -38,7 +38,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build site
-        run: pnpm build --base=/google-authenticator-export-decoder/
+        run: pnpm build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
