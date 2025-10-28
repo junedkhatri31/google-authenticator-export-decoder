@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply box-border;
+  }
+
+  body {
+    @apply m-0 min-h-screen bg-gradient-to-b from-[#0b2533] via-[#12495d] to-[#1a738a] font-sans text-[#0f2c38];
+  }
+
+  a {
+    @apply font-semibold text-[#0f6a8a] no-underline transition-colors;
+  }
+
+  a:hover {
+    @apply text-[#0891b2];
+  }
+}
