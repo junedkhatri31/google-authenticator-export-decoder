@@ -33,7 +33,7 @@ export function DecodedAccounts({ accounts }: DecodedAccountsProps) {
 
             return (
               <article
-                className="flex flex-col gap-4 rounded-[20px] bg-gradient-to-br from-white/90 via-[#e0faff]/95 to-[#d9f6ff]/95 p-6 text-[#0d2a36] shadow-[0_16px_30px_rgba(15,80,102,0.16)]"
+                className="flex flex-col gap-4 rounded-[20px] bg-linear-to-br from-white/90 via-[#e0faff]/95 to-[#d9f6ff]/95 p-6 text-[#0d2a36] shadow-[0_16px_30px_rgba(15,80,102,0.16)]"
                 key={`${account.name}-${index}`}
               >
                 <div className="flex flex-col gap-1">
@@ -91,7 +91,7 @@ export function DecodedAccounts({ accounts }: DecodedAccountsProps) {
 
                 <button
                   type="button"
-                  className="mt-2 w-full cursor-pointer rounded-full bg-gradient-to-r from-[#0ea5b9] to-[#0f7a9c] px-4 py-2 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(7,96,122,0.28)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(7,96,122,0.32)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#0c95a1] disabled:cursor-not-allowed disabled:bg-[#0b5f78]/40 disabled:text-white/60 disabled:shadow-none"
+                  className="mt-2 w-full cursor-pointer rounded-full bg-linear-to-r from-[#0ea5b9] to-[#0f7a9c] px-4 py-2 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(7,96,122,0.28)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(7,96,122,0.32)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#0c95a1] disabled:cursor-not-allowed disabled:bg-[#0b5f78]/40 disabled:text-white/60 disabled:shadow-none"
                   onClick={() => setSelectedIndex(index)}
                   disabled={!hasSecret}
                 >

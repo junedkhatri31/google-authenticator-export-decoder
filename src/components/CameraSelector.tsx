@@ -29,7 +29,7 @@ export function CameraSelector({ cameras, value, onChange, disabled }: CameraSel
       </label>
       <div className="relative">
         <select
-          className="w-full cursor-pointer rounded-xl border border-white/30 bg-white/15 px-4 py-2 text-sm font-medium text-white shadow-[0_10px_25px_rgba(13,73,91,0.18)] focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0c95a1]"
+          className="w-full cursor-pointer rounded-xl border border-white/30 bg-white/15 px-4 py-2 text-sm font-medium text-white shadow-[0_10px_25px_rgba(13,73,91,0.18)] focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0c95a1]"
           value={value ?? cameras[0]?.id ?? ''}
           onChange={handleChange}
           disabled={disabled}

@@ -209,7 +209,7 @@ function App() {
         <div className="flex flex-wrap items-center gap-3">
           {status !== 'active' && status !== 'requesting' ? (
             <button
-              className="cursor-pointer rounded-full bg-gradient-to-r from-[#0ea5b9] to-[#0f7a9c] px-7 py-3 font-semibold text-white shadow-[0_12px_24px_rgba(7,96,122,0.28)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_32px_rgba(7,96,122,0.32)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0c95a1]"
+              className="cursor-pointer rounded-full bg-linear-to-r from-[#0ea5b9] to-[#0f7a9c] px-7 py-3 font-semibold text-white shadow-[0_12px_24px_rgba(7,96,122,0.28)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_32px_rgba(7,96,122,0.32)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0c95a1]"
               type="button"
               onClick={() => void handleStartClick()}
             >
@@ -217,7 +217,7 @@ function App() {
             </button>
           ) : (
             <button
-              className="cursor-pointer rounded-full bg-gradient-to-r from-[#ff715b] to-[#ef4444] px-7 py-3 font-semibold text-white shadow-[0_12px_24px_rgba(191,46,46,0.28)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_32px_rgba(191,46,46,0.32)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb9484]"
+              className="cursor-pointer rounded-full bg-linear-to-r from-[#ff715b] to-[#ef4444] px-7 py-3 font-semibold text-white shadow-[0_12px_24px_rgba(191,46,46,0.28)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_32px_rgba(191,46,46,0.32)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fb9484]"
               type="button"
               onClick={() => void handleReset()}
             >
@@ -226,7 +226,7 @@ function App() {
           )}
           {status === 'decoded' && (
             <button
-              className="cursor-pointer rounded-full border border-[rgba(12,100,130,0.2)] bg-white/45 px-6 py-3 font-semibold text-[#0f5066] transition-colors duration-200 hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0c95a1]"
+              className="cursor-pointer rounded-full border border-[rgba(12,100,130,0.2)] bg-white/45 px-6 py-3 font-semibold text-[#0f5066] transition-colors duration-200 hover:bg-white/60 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0c95a1]"
               type="button"
               onClick={() => void handleReset()}
             >
@@ -240,7 +240,7 @@ function App() {
         )}
 
         <a
-          className="inline-flex items-center gap-2 self-start rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(7,70,92,0.25)] transition hover:-translate-y-0.5 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0c95a1]"
+          className="inline-flex items-center gap-2 self-start rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(7,70,92,0.25)] transition hover:-translate-y-0.5 hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0c95a1]"
           href="https://github.com/junedkhatri31/google-authenticator-export-decoder"
           target="_blank"
           rel="noreferrer"

@@ -47,7 +47,7 @@ export function InfoTooltip({ label, content, className }: InfoTooltipProps) {
         aria-label={label}
         aria-expanded={open}
         aria-controls={`${id}-tooltip`}
-        className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#0ea5b9]/20 text-sm font-semibold text-[#055b72] shadow-[0_6px_18px_rgba(6,75,95,0.2)] transition hover:bg-[#0ea5b9]/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0c95a1]"
+        className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#0ea5b9]/20 text-sm font-semibold text-[#055b72] shadow-[0_6px_18px_rgba(6,75,95,0.2)] transition hover:bg-[#0ea5b9]/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0c95a1]"
         onClick={() => setOpen((prev) => !prev)}
       >
         ℹ️

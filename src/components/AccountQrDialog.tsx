@@ -130,7 +130,7 @@ export function AccountQrDialog({ account, onClose }: AccountQrDialogProps) {
       aria-modal="true"
       onClick={handleBackdropClick}
     >
-      <div className="relative w-full max-w-lg rounded-3xl bg-gradient-to-br from-white/95 via-[#f0fbff] to-white/90 p-8 text-[#062a38] shadow-[0_28px_80px_rgba(4,33,44,0.35)]">
+      <div className="relative w-full max-w-lg rounded-3xl bg-linear-to-br from-white/95 via-[#f0fbff] to-white/90 p-8 text-[#062a38] shadow-[0_28px_80px_rgba(4,33,44,0.35)]">
         <button
           type="button"
           className="absolute right-4 top-4 cursor-pointer rounded-full bg-[#0c4a5f]/10 px-3 py-1 text-sm font-semibold uppercase tracking-[0.2em] text-[#0c4a5f] transition-colors hover:bg-[#0c4a5f]/20"
@@ -194,10 +194,10 @@ export function AccountQrDialog({ account, onClose }: AccountQrDialogProps) {
               />
               <span className="rounded-full bg-[#dff6ff] px-2 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.3em] text-[#0a6078]">otpauth tips</span>
             </div>
-            <p className="mt-2 break-words font-mono text-sm text-[#033043]">{otpAuthUri}</p>
+            <p className="mt-2 wrap-break-word font-mono text-sm text-[#033043]">{otpAuthUri}</p>
             <button
               type="button"
-              className="mt-3 w-full cursor-pointer rounded-full bg-gradient-to-r from-[#0ea5b9] to-[#0f7a9c] px-4 py-2 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(7,96,122,0.28)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(7,96,122,0.32)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#0c95a1]"
+              className="mt-3 w-full cursor-pointer rounded-full bg-linear-to-r from-[#0ea5b9] to-[#0f7a9c] px-4 py-2 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(7,96,122,0.28)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(7,96,122,0.32)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#0c95a1]"
               onClick={() => void handleCopy()}
             >
               {copied ? 'Copied!' : 'Copy URI'}
