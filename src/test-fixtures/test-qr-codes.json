@@ -1,0 +1,10 @@
+{
+  "generated": {
+    "at": "2024-06-11T19:49:13.833Z",
+    "usingAppVersion": "6.0"
+  },
+  "Google-auth-test-qr.png": "otpauth-migration://offline?data=CiIKCkhlbGwPId6tvugSDlRlc3QgYWNjb3VudCAxIAEoATACCiIKCgBlbGxvId6tvu8SDlRlc3QgYWNjb3VudCAyIAEoATACCiMKCgBEjWxkLzvjHR8SDUNvdW50ZXIga2V5IDEgASgBMAE4ARABGAEgACj8nJf4Bg%3D%3D",
+  "Google-auth-test2-qr1.png": "otpauth-migration://offline?data=CiIKCkhlbGwPId6tvugSDlRlc3QgYWNjb3VudCAxIAEoATACCiIKCgBlbGxvId6tvu8SDlRlc3QgYWNjb3VudCAyIAEoATACCiMKCgBEjWxkLzvjHR8SDUNvdW50ZXIga2V5IDEgASgBMAE4AQoVCgoAAAAAAAAAAAAAEgEzIAEoATACChUKCghCEIQhCEIQhCESATQgASgBMAIKFQoKEIQhCEIQhCEIQhIBNSABKAEwAgoVCgoQhCEIQhCEIQhCEgE2IAEoATACChUKChjGMYxjGMYxjGMSATcgASgBMAIKFQoKIQhCEIQhCEIQhBIBOCABKAEwAgoWCgspSlKUpSlKUpSlKRIBOSABKAEwAhABGAIgACi/w/UM",
+  "Google-auth-test2-qr2.png": "otpauth-migration://offline?data=ChgKDDGMYxjGMYxjGMYxjBICMTAgASgBMAIKFgoKOc5znOc5znOc5xICMTEgASgBMAIQARgCIAEov8P1DA%3D%3D",
+  "Google-auth-test-sha512-8digit.png": "otpauth-migration://offline?data=CjoKFD1jwRTgK6xTGKA0gdTWaGMebxmTEg1UT1RQZ2VuZXJhdG9yGg1UT1RQZ2VuZXJhdG9yIAMoAjACEAEYASAAKJ2G1g0%3D"
+}
