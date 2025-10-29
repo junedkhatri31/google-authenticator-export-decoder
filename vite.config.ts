@@ -8,4 +8,13 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react/jsx-dev-runtime',
+      'qr-scanner',
+      'qrcode-generator',
+    ],
+  },
 })
