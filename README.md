@@ -2,7 +2,7 @@
 
 Interactive web application for recovering account details from Google Authenticator migration QR codes. Scan the export directly with your camera to reveal TOTP/HOTP secrets, copy the generated otpauth URI, or display an authenticator-ready QR code.
 
-👉 **Live demo:** https://authenticator-export-decoder.juned.site
+👉 **Live demo:** https://authenticator-export-decoder.merakisys.com
 
 If you find this tool helpful, please consider ⭐ starring the repository to support future improvements.
 
