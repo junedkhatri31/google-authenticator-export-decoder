@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
-    "protobufjs": "^7.5.4",
+    "protobufjs": "^7.5.5",
     "qr-scanner": "^1.4.2",
     "qrcode-generator": "^2.0.4",
     "react": "^19.1.1",
